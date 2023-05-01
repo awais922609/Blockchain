@@ -13,3 +13,11 @@ private − Private functions/ Variables can only be used internally and not eve
 ** In order to interact with the contract we need 2 things
 1. Address of the contract to interact with
 2. ABI (Application Binary Interface) . Explained later
+
+ABI : interfaces compile down to ABI.
+The ABI tells solidity and other programming languages that how it can interact with another contract.
+Anytime you want to interact with a deployed contract you would be needing ABI.
+
+
+Tuple: A list of potentially different types.
+
