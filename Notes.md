@@ -21,3 +21,12 @@ Anytime you want to interact with a deployed contract you would be needing ABI.
 
 Tuple: A list of potentially different types.
 
+Some Function modify the state of the blockchain while some do not
+** View and Pure does not modify the state of the blockchain
+
+* We can also specify different data locations in our functions
+calldata and memory=>indicates these variables are temporary and only exist for duration of function.
+* storage are permanent variables and will stay there forever.
+
+* calldata is used to access function arguments and input data, memory is used for temporary storage within function execution, and storage is used for persistent storage of state variables.
+* Call data is read only 
