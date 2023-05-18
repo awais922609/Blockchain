@@ -30,3 +30,20 @@ calldata and memory=>indicates these variables are temporary and only exist for 
 
 * calldata is used to access function arguments and input data, memory is used for temporary storage within function execution, and storage is used for persistent storage of state variables.
 * Call data is read only 
+
+=> We can deploy other contracts from current contract in two lines.
+1st. Import the contract using import "/path/to/contract"
+2nd. Using new keyword as SimpleStorage simpleStorage = new SimpleStorage();
+
+** Inheritance **
+=> we use is keyword for inheritance
+=> use override keyword if you want to change the functionality of the import contract function
+=> Add virtual with the main imported contract function.
+
+** You can send ethers to other contracts using transfer , send and call
+=> transfer (2300 gas throw errors)
+=> send (2300 gas , returns bool)
+=> call (forward all gas or set gas , returns bool)
+
+** FallBack
+In Solidity, the fallback function is a special function that is executed when a contract receives a message (transaction) that does not match any of its defined function signatures. 
