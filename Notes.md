@@ -1,3 +1,4 @@
+daY4
 Visibility Quantifiers
 Following are various visibility quantifiers for functions/state variables of a contract.
 
@@ -47,3 +48,6 @@ calldata and memory=>indicates these variables are temporary and only exist for 
 
 ** FallBack
 In Solidity, the fallback function is a special function that is executed when a contract receives a message (transaction) that does not match any of its defined function signatures. 
+
+** Contract VS Interface
+a c ontract represents a self-contained unit of code with both implementation details and state variables, while an interface defines the external-facing functions and serves as a blueprint for contracts to adhere to without providing implementation details.
