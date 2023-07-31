@@ -74,3 +74,41 @@ https://peckshield.medium.com/alert-new-batchoverflow-bug-in-multiple-erc20-smar
 
 ERC721 and ERC1155 Tokens
 These are what are also called NFTs. These two standards, similar to ERC20, provide a base line for what requirements should be met when creating NFTs
+
+
+Day 2:
+Solidity
+
+Local
+
+Declared inside a function and are not stored on blockchain
+
+State
+
+Declared outside a function to maintain the state of the smart contract
+
+Stored on the blockchain
+
+Global
+
+Provide information about the blockchain. They are injected by the Ethereum Virtual Machine during runtime.
+
+Includes things like transaction sender, block timestamp, block hash, etc.
+
+Public Functions:
+meaning it can be called from within the contract and also externally.
+
+View Keywork:
+meaning that the function doesn't change the state of any variable view functions in solidity do not require gas.
+
+Memory Keyword:
+memory - the value is stored only in memory, and not on the blockchain  it only exists during the time the function is being executed.Memory variables and Storage variables can be thought of as similar to RAM vs Hard Disk.
+
+Delete Keyword:
+Delete does not change the array length It resets the value at index to it's default value,
+
+DO YOUR OWN RESEARCH:
+What is the value of block.coinbase?
+ANS: ADDRESS OF THE MINER WHO MINED THE BLOCK.
+
+
