@@ -141,3 +141,36 @@ A fungible token is one in which all 'parts' of the token are the same. Exchangi
 _mint(msg.sender, 10 * 10 ** 18);
 
 _mint is an internal function within the ERC20 standard contract, which means that it can only be called by the contract itself. External users cannot call this function.
+
+
+If you are receiving ETH in an Externally Owned Account (EOA) i.e. an account controlled by a private key (like MetaMask) - you do not need to do anything special as all such accounts can automatically accept all ETH transfers.
+
+However, if you are writing a contract that you want to be able to receive ETH transfers directly, you must have at least one of the functions below:
+
+receive() external payable
+
+fallback() external payable
+
+receive() is called if msg.data is an empty value, and fallback() is used otherwise.
+
+Contracts can call other contracts by just calling functions on an instance of the other contract like A.foo(x, y, z). To do so, you must have an interface for A which tells your contract which functions exist. Interfaces in Solidity behave like header files, and serve similar purposes to the ABI we have been using when calling contracts from the frontend. This allows a contract to know how to encode and decode function arguments and return values for calling external contracts.
+
+NOTE: Interfaces you use do not need to be extensive. i.e. they do not need to necessarily contain all the functions that exist in the external contract - only those which you might be calling at some point.
+
+
+Finality
+
+A transaction has finality on Ethereum when it's part of a block that cannot be changed, i.e. the transactions in that block cannot be rolled-back, at least not feasibly.
+
+On PoS Ethereum, this is managed through the use of "checkpoint" blocks. Every 32 blocks, called an epoch, a checkpoint block is produced. Along with voting for individual blocks, validators also vote for pairs of checkpoint blocks every epoch.
+
+So for example, if Block N was a checkpoint block, then Block N+32 is also a checkpoint block. Validators vote for the pair (Block N, Block N + 32) that they consider to be a valid sequence of the chain. If enough votes are collected in favor of the pair, then:
+
+The earlier block Block N is marked as Finalized
+
+The later block Block N + 32 is marked as Justified
+
+NOTE: The earlier block N must have already been Justified when it was voted for during the epoch (Block N - 32, Block N)
+
+ZK-Rullups & Optimistic Rollups
+ZK Rollups utilize zero-knowledge proofs for transaction validity, ensuring efficient scalability with strong on-chain security. On the other hand, Optimistic Rollups prioritize scalability by assuming transactions are valid unless proven otherwise, achieving speed while relying on occasional on-chain verification.
