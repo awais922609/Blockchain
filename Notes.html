@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html">
+
+
+
+
+<title>Beautiful Notes</title>
+
+
+
+  <div class="note">
+    <h2>All websites look the same on all browsers. Have you ever thought why?</h2>
+    <p><strong>Ans:</strong> Because all they follow standards, standards set by W3C World Wide Web Consortium.</p>
+    <p>These standards are set around the three key things every web developer needs to have some familiarity with - HTML, CSS, and JavaScript. The W3C sets standards around how a web browser like Chrome must understand, run, and display the code being written by a web developer using HTML, CSS, and JavaScript.</p>
+  </div>
+  <div class="note">
+    <h2>What even is a blockchain?</h2>
+    <p>A blockchain is a distributed, digital, immutable ledger that is used to record transactions and store data in a secure and transparent manner. It involves a network of nodes that collectively maintain a single source of truth.</p>
+    <p>Transactions are secured through consensus mechanisms, and it provides a foundation for various decentralized applications.</p>
+  </div>
+  <div class="note">  <h2>What is Node ?</h2>  <p>In simple terms, consider it a computer running the blockchain software.</p>  </div>  <div class="note">  <h2>Genesis Block</h2>  <p>The first block in the blockchain. It is the only block that does not reference a predecessor block.</p>  </div>  <div class="note">  <h2>Mining Node</h2>  <p>Type of node, called a mining node, is responsible for grouping together new transactions being made on a network into a block, verifying them, and proposing the block to be included onto the global ledger by everyone else.</p>  </div>  <div class="note">  <h2>Fork Process</h2>  <p>When 1 blockchain splits into 2 chains then that process is called Fork. It has 2 types:</p>  <p><strong>Hard fork:</strong> A fork that is not backward compatible, meaning that nodes running the old version of the protocol will not be able to validate blocks created on the new version of the protocol.</p>  <p><strong>Soft Fork:</strong> A fork that is backward compatible, meaning that nodes running the old version of the protocol will be able to validate blocks created on the new version of the protocol, but nodes running the new version of the protocol will not be able to validate blocks created on the old version of the protocol.</p>  <p>Example of Fork: Bitcoin into Bitcoin &amp; Bitcoin Cash in 2017</p>  </div>  <div class="note">  <h2>Web-1 VS Web-2 VS Web-3</h2>  <p><strong>Web1:</strong> Read 📖</p>  <p><strong>Web2:</strong> Read-Write 📖 🖊️</p>  <p><strong>Web3:</strong> Read-Write-Own 📖 🖊️ 🔑</p>  </div>  <div class="note">  <h2>Ethereum</h2>  <p>Ethereum is a decentralized blockchain that supports smart contracts. Unlike Bitcoin, which only supports the transfer of the Bitcoin token around the network, Ethereum is more general purpose.</p>  <p>Developers can build dApps, or decentralized applications, which can be executed on the Ethereum network on the Ethereum Virtual Machine (EVM). The global state of Ethereum therefore consists of more than just the balance of every account, but also the state of each dApp.</p>  <p>Ethereum first used proof of work for consensus but then The Serenity Patch, introduced in September of 2022, made the switch for Ethereum going from Proof of Work to a Proof of Stake mechanism.</p>  </div>  <div class="note">  <h2>ERC20 Tokens</h2>  <p>In addition to Ether, people can create and use their own currencies on Ethereum. The most common form of currency is ERC20 tokens. ERC20 Tokens are smart contracts that fit a specific standard. Developers can extend beyond the standard, but should meet the minimum requirements when making their own token. The standardization allows for digital wallets to easily support all types of tokens, without needing specialized code for each token created.</p>  <p>ERC-20 tokens are tokens designed and used solely on the Ethereum platform.</p>  <p><strong>Optional:</strong></p>  <p>Token Name</p>  <p>Symbol</p>  <p>Decimal (up to 18)</p>  <p><strong>Mandatory:</strong></p>  <p>totalSupply</p>  <p>balanceOf</p>  <p>transfer</p>  <p>transferFrom</p>  <p>approve</p>  <p>allowance</p>  </div>  <div class="note">  <h2>How is Ethereum different from Bitcoin?</h2>  <p><strong>1. Ethereum’s block time is shorter:</strong> In Ethereum, the time between blocks is around 14 seconds, compared with Bitcoin’s ~10 minutes.</p>  <p><strong>2. Ethereum has smaller blocks:</strong> In Bitcoin, the maximum block size is specified in bytes (currently 1 MB) whereas Ethereum’s block size is based on complexity of contracts being run – it’s known as a Gas limit per block. Currently the maximum block size in Ethereum is around 1,500,000 Gas. Data-wise, most Ethereum blocks are currently under 2 KB in size.</p>  </div>  <div class="note">  <h2>Bonus</h2>  <p><strong>Some Good Hack Reads:</strong>  <a href="https://peckshield.medium.com/alert-new-batchoverflow-bug-in-multiple-erc20-smart-contracts-cve-2018-10299-511067db6536" target="_blank">https://peckshield.medium.com/alert-new-batchoverflow-bug-in-multiple-erc20-smart-contracts-cve-2018-10299-511067db6536</a></p>  </div>  <!-- Add more formatted notes here... -->
+<div class="note">  <h2>ERC721 and ERC1155 Tokens</h2>  <p>These are what are also called NFTs (Non-Fungible Tokens). These two standards, similar to ERC20, provide a baseline for requirements when creating NFTs.</p>  </div>  <div class="note">  <h2>Solidity</h2>  <p><strong>Local:</strong> Declared inside a function and not stored on the blockchain.</p>  <p><strong>State:</strong> Declared outside a function to maintain the state of the smart contract. Stored on the blockchain.</p>  <p><strong>Global:</strong> Provide information about the blockchain. Injected by the Ethereum Virtual Machine during runtime. Includes things like transaction sender, block timestamp, block hash, etc.</p>  <p><strong>Public Functions:</strong> Can be called from within the contract and externally.</p>  <p><strong>View Keyword:</strong> Function that doesn't change the state of any variable. View functions in Solidity do not require gas.</p>  <p><strong>View:</strong> Functions that do not change any state values. Example: <code>uint public x = 1; view function(uint y) { return x + y; }</code></p>  <p><strong>Pure:</strong> Functions that do not change any state values and also do not read any state values. Example: <code>pure function(uint y) { return x + y; }</code></p>  <p><strong>Events:</strong> Allow contracts to perform logging on the Ethereum blockchain. Used for frontend updates or as a form of storage.</p>  <p><strong>Memory Keyword:</strong> Value stored only in memory, not on the blockchain. Exists during the function's execution.</p>  <p><strong>Delete Keyword:</strong> Resets the value at index to its default value.</p>  </div>  <div class="note">  <h2>DO YOUR OWN RESEARCH</h2>  <p><strong>What is the value of block.coinbase?</strong> Ans: Address of the miner who mined the block.</p>  </div>  <div class="note">  <h2>ZK-Rollups &amp; Optimistic Rollups</h2>  <p><strong>ZK Rollups:</strong> Utilize zero-knowledge proofs for transaction validity, ensuring efficient scalability with strong on-chain security.</p>  <p><strong>Optimistic Rollups:</strong> Prioritize scalability by assuming transactions are valid unless proven otherwise, achieving speed while relying on occasional on-chain verification.</p>  </div>
+<div class="note">  <h2>Types of Scaling Solutions</h2>  <p>There are a multitude of Layer 2 scaling solutions out there, differing in transaction execution and data availability. Side chains, though not technically Layer 2 due to the lack of main chain security benefits, are often referred to as such.</p>  </div>  <div class="note">  <h2>Plasma Chains</h2>  <p>Plasma Chains are like smaller parties within a big party. In the blockchain world, they are secondary chains connected to a main blockchain. Just as different activities at a party can happen at different speeds, Plasma Chains process transactions more quickly and independently, helping the blockchain network run smoother.</p>  <p><strong>Technical Terms:</strong> Plasma Chains are secondary blockchain networks connected to a main blockchain, designed to improve scalability and efficiency by processing transactions independently while syncing periodically with the main chain for security.</p>  </div>  <div class="note">  <h2>On Chain vs Off Chain</h2>  <p><strong>On-chain:</strong> Data available on the Layer 1 main chain.</p>  <p><strong>Off-chain:</strong> Data NOT available on the Layer 1 main chain, possibly available on the Layer 2 chain.</p>  <p>Both rollup techniques store data on-chain via verifiable proofs, but ZK Rollups use validity proofs verified upon posting, while Optimistic Rollups rely on challengers to catch fraudulent proofs.</p>  <p>Plasma chains store most data off the main chain and post snapshots to the main chain without a proof attached, similar to OR's.</p>  </div>  <div class="note">  <h2>Validiums</h2>  <p>Validium works like ZK Rollups, storing data off the main chain. Users trust operators to make data available. A committee ensures data availability if L2 operators fail, making their copy of the data publicly available.</p>  <p><strong>Note:</strong> Validium is about data availability and doesn't concern transaction execution; can be combined with ZK Rollup transaction execution.</p>  </div>  <div class="note">  <h2>Volitions</h2>  <p>Volition chains are hybrids of Rollups and Validium data-availability. Users decide what's on the main chain. For instance, a trading firm may store data off-chain for individual transactions and bring it on-chain for weekly summaries. Similar to Validiums, it focuses on data availability and can be used with ZK Rollups.</p>  </div>
+
+<div class="note">
+  <h2>Content-Based Addressing</h2>
+  <p>Content-Based Addressing involves finding items on the blockchain using their unique content, typically through cryptographic hashes.</p>
+</div>
+
+<div class="note">
+  <h2>Location-Based Addressing</h2>
+  <p>Location-Based Addressing refers to finding items on the internet based on their location, using URLs to navigate to specific web addresses.</p>
+</div>
+
+<div class="note">
+  <h2>IPFS Providers</h2>
+  <p>Popular IPFS node providers include Pinata and Textile.</p>
+</div>
+
+<div class="note">
+  <h2>Use Cases of IPFS</h2>
+  <ul>
+    <li>Open, Borderless Knowledge Bases</li>
+    <li>Data Marketplaces</li>
+    <li>NFT Metadata</li>
+    <li>Hosting Very Large ML/AI Datasets</li>
+    <li>Offline P2P Network</li>
+  </ul>
+</div>
+
+<div class="note">
+  <h2>Testing Smart Contracts with Hardhat</h2>
+  <p>To test smart contracts on a local blockchain node using Hardhat, follow these steps:</p>
+  <ol>
+    <li>Set up Hardhat:</li>
+    <code>npm init -y</code></br>
+    <code>npm install --save-dev hardhat</code></br>
+    <code>npx hardhat</code></br>
+    <code>npm install --save-dev @nomicfoundation/hardhat-toolbox</code></br>
+    <li>Add your local account in MetaMask:</li>
+    <ul>
+      <li>Import account from settings</li>
+      <li>Change Chain ID to 31337 (for local blockchain)</li>
+      <li>Click Save</li>
+    </ul>
+    <li>Deploy a contract in Remix:</li>
+    <ul>
+      <li>Select Injection Provider from Environment in Deployment tab</li>
+      <li>Deploy the Greeter.sol contract (code available <a href="https://github.com/awais922609/Blockchain/blob/main/Level1_Blockchain/Greeter.sol">here</a>)</li>
+      <li>Set a greeting and click setGreeting</li>
+    </ul>
+    <li>Check your terminal running Hardhat node:</li>
+    <p>It should display relevant console logs.</p>
+  </ol>
+  <p>For detailed visual instructions, refer to the provided images.</p>
+  <ul>
+    <li><a href="https://imgur.com/rZi6Ofi">Image 1</a></li>
+    <li><a href="https://imgur.com/X74AcuZ">Image 2</a></li>
+    <li><a href="https://imgur.com/9SjtWCu">Image 3</a></li>
+    <li><a href="https://i.imgur.com/Dt6py3h.png">Image 4</a></li>
+  </ul>
+</div>
+
+
+</div>
+</body>
+
+</html>
