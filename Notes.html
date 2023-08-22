@@ -91,6 +91,34 @@
   </ul>
 </div>
 
+<div class="note">
+  <h2><b> <u> <i> Lit Protocol </i></u></b></h2>
+  <p>Lit is an attempt to decentralize public key cryptography, allowing users to encrypt and decrypt content using PKC without the need for a central authority.</p>
+</div>
+
+<div class="note">
+  <h2>Encryption Mechanism</h2>
+  <ol>
+    <li>Alice picks an access control condition and names it as A.</li>
+    <li>Alice hashes the data to be encrypted and names that hash as ID.</li>
+    <li>Alice picks a message to sign it, which will become the decryption key, and calls it D.</li>
+    <li>Alice encrypts the data so that only a signature of D from the BLS network key can decrypt it:</li>
+    <p>D = Hash(A) + ID (ID is also a hash)</p>
+    <li>Alice stores A, ID, and the encrypted data wherever she wants.</li>
+  </ol>
+</div>
+
+<div class="note">
+  <h2>Decryption Mechanism</h2>
+  <ol>
+    <li>Bob provides A and ID to the nodes and asks them to sign it.</li>
+    <li>Nodes check the access control condition A and verify whether the user meets them.</li>
+    <li>Nodes create D using hash(A) & ID and sign it with the network key.</li>
+    <li>The user combines the signature shares from the nodes to get the complete BLS signature.</li>
+    <li>The user decrypts the data using the BLS signature as the decryption key.</li>
+  </ol>
+</div>
+
 
 </div>
 </body>
